@@ -1,0 +1,25 @@
+<div ng-controller="BooksController as ctrl">
+
+  <div class="table-container">
+    <table>
+      <thead>
+      <tr>
+        <th ng-click="ctrl.toggleSort('title')" ng-class="{sorted: sortColumn == 'title', reverse: sortReverse}">
+          Title
+        </th>
+        <th ng-click="ctrl.toggleSort('author')" ng-class="{sorted: sortColumn == 'author', reverse: sortReverse}">
+          Author
+        </th>
+      </tr>
+      </thead>
+      <tbody ng-react-component="BooksComponent" data="data" controller="ctrl"></tbody>
+    </table>
+
+    <div class="summary" ng-if="selectedBook">
+      <h3>Summary</h3>
+      {{selectedBook.summary}}
+    </div>
+  </div>
+
+  <button ng-click="ctrl.refreshBooks()">Refresh Books</button>
+</div>

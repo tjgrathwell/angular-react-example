@@ -12,6 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require underscore
 //= require angular
 //= require angular_application
+//= require react
+//= require components
 //= require_tree .
