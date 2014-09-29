@@ -1,0 +1,42 @@
+.table-container {
+  max-height: 400px;
+  overflow-y: auto;
+  width: 600px;
+}
+
+table {
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+th, td {
+  cursor: pointer;
+}
+
+tr.selected {
+  background-color: orangered;
+}
+
+th.sorted {
+  &:after {
+    font-size: 10px;
+    content: '▼';
+  }
+  &.reverse:after {
+    content: '▲';
+  }
+}
+
+.summary {
+  position: absolute;
+  left: 670px;
+  top: 90px;
+  width: 200px;
+  border: 1px solid purple;
+}
